@@ -20,7 +20,7 @@ export default function Contact() {
   return (
     <Layout>
       <Head>
-        <title>Kayky de Brito - Desenvolvedor de Software Freelancer</title>
+        <title>Kayky de Brito - Freelancer Software Developer</title>
       </Head>
       <div className="container">
         <ContactContentTranslate />
