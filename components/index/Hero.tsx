@@ -102,10 +102,10 @@ const Hero = ({ t }: { readonly t: TFunction }) => {
           .root {
             width: 100vw;
           }
-        }
 
-        .type {
-          display: block;
+          .type {
+            display: block;
+          }
         }
       `}</style>
     </div>
