@@ -20,21 +20,23 @@ const Hero = ({ t }: { readonly t: TFunction }) => {
       <div className="content">
         <HeroTitle>
           <span className="feat">{t("Creating")}</span> {t("with")}{" "}
-          <Typewriter
-            onInit={() => {}}
-            options={{
-              strings: [
-                t("code") + ".",
-                t("dedication") + ".",
-                t("math") + ".",
-                t("art") + ".",
-                t("design") + ".",
-              ],
-              autoStart: true,
-              loop: true,
-              cursor: "_",
-            }}
-          />
+          <span className="type">
+            <Typewriter
+              onInit={() => {}}
+              options={{
+                strings: [
+                  t("code") + ".",
+                  t("dedication") + ".",
+                  t("math") + ".",
+                  t("art") + ".",
+                  t("design") + ".",
+                ],
+                autoStart: true,
+                loop: true,
+                cursor: "_",
+              }}
+            />
+          </span>
         </HeroTitle>
         <HeroDesc>{t("desc")}</HeroDesc>
         <HeroDivisor />
@@ -100,6 +102,10 @@ const Hero = ({ t }: { readonly t: TFunction }) => {
           .root {
             width: 100vw;
           }
+        }
+
+        .type {
+          display: block;
         }
       `}</style>
     </div>
