@@ -7,15 +7,23 @@ import HeroDivisor from "../components/index/Hero/HeroDivisor";
 import { HeroDesc, HeroTitle } from "../components/index/Hero/HeroElements";
 import Layout from "../components/layout/Layout";
 
-const Contact = ({ t }: { readonly t: TFunction }) => {
+const ContactContent = ({ t }: { readonly t: TFunction }) => (
+  <>
+    <HeroTitle>{t("head")}</HeroTitle>
+    <HeroDesc>{t("desc")}</HeroDesc>
+  </>
+);
+
+const ContactContentTranslate = withTranslation("contact")(ContactContent);
+
+export default function Contact() {
   return (
     <Layout>
       <Head>
         <title>Kayky de Brito - Desenvolvedor de Software Freelancer</title>
       </Head>
       <div className="container">
-        <HeroTitle>{t("head")}</HeroTitle>
-        <HeroDesc>{t("desc")}</HeroDesc>
+        <ContactContentTranslate />
         <HeroDivisor />
         <HeroButton href="mailto:hello@kaykyb.com">
           <span>
@@ -74,6 +82,4 @@ const Contact = ({ t }: { readonly t: TFunction }) => {
       `}</style>
     </Layout>
   );
-};
-
-export default withTranslation("contact")(Contact);
+}
