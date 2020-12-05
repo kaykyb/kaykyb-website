@@ -25,7 +25,7 @@ export default function Contact() {
       <div className="container">
         <ContactContentTranslate />
         <HeroDivisor />
-        <HeroButton href="mailto:hello@kaykyb.com">
+        <HeroButton>
           <span>
             <div className="btn-content">
               <Mail
@@ -37,7 +37,24 @@ export default function Contact() {
                 }}
                 strokeWidth={3}
               />{" "}
-              hello@kaykyb.com
+              {/* Thanks to https://stackoverflow.com/a/20383295/10777177 */}
+              <a
+                href="#"
+                className="cryptedmail"
+                data-name="hello"
+                data-domain="kaykyb"
+                data-tld="com"
+                onClick={function (e) {
+                  const t = e.target as HTMLAnchorElement;
+                  const name = t.getAttribute("data-name");
+                  const domain = t.getAttribute("data-domain");
+                  const tld = t.getAttribute("data-tld");
+
+                  window.location.href =
+                    "mailto:" + name + "@" + domain + "." + tld;
+                  return false;
+                }}
+              ></a>
             </div>
           </span>
         </HeroButton>
