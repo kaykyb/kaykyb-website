@@ -1,4 +1,3 @@
-import Link from "next/link";
 import React from "react";
 import { Children } from "../../../lib/types";
 
@@ -12,9 +11,9 @@ export default function HeroButton({ children, href }: Props) {
   }
 
   return (
-    <Link href={href}>
+    <a href={href}>
       <Base>{children}</Base>
-    </Link>
+    </a>
   );
 }
 
