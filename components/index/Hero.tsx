@@ -52,7 +52,7 @@ const Hero = ({ t }: { readonly t: TFunction }) => {
           {t("hire-me-freelancer")}
         </HeroButton>
         <HeroDivisor />
-        <HeroButton href={"/" + language + "/contact"}>
+        <HeroButton href="https://www.linkedin.com/in/kayky-de-brito-dos-santos-a5263b169/">
           {t("contact")}
         </HeroButton>
       </div>
